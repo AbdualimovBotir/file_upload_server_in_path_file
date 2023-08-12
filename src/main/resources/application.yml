@@ -20,4 +20,8 @@ upload:
     folder: /Users/hp/OneDrive/Документы/upload/
 
 
+api:
+  json placeholder: https://jsonplaceholder.typicode.com/
+
+
 

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FIleStorageRepo extends JpaRepository<FileStorege,Long> {
+    FileStorege findByHashId(String hashId);
 }

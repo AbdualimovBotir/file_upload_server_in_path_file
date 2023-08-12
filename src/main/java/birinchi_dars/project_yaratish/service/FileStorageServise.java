@@ -68,6 +68,9 @@ public class FileStorageServise {
         return fileStorege;
     }
 
+    public FileStorege findByHashId(String hashId){
+        return fIleStorageRepo.findByHashId(hashId);
+    }
     private String getExt(String fileName){
         //hisobot.doc
         String ext=null;
@@ -80,4 +83,6 @@ public class FileStorageServise {
         }
         return ext;
     }
+
+
 }
