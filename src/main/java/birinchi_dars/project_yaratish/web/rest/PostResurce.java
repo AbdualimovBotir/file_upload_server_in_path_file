@@ -15,15 +15,17 @@ public class PostResurce {
     public PostResurce(PostServise postServise){
         this.postServise=postServise;
     }
-    @GetMapping("/posts")
-    public ResponseEntity getAll(){
-        List<Posts> result=postServise.findAll();
-        return ResponseEntity.ok(result);
-    }
 
-    @PostMapping("/postss")
-    public ResponseEntity postAll(@RequestBody Posts posts) {
+    @PostMapping("/posts")
+    public ResponseEntity create(@RequestBody Posts posts){
         Posts result=postServise.save(posts);
         return ResponseEntity.ok(result);
     }
+    @GetMapping("/posts")
+    public ResponseEntity getAll(){
+        Object result=postServise.findAlll();
+        return ResponseEntity.ok(result);
+    }
+
+
 }
