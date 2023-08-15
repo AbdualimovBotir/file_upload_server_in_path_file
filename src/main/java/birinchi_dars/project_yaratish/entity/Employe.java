@@ -1,9 +1,8 @@
 package birinchi_dars.project_yaratish.entity;
 
-import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
+import com.sun.istack.NotNull;
 
-import javax.swing.*;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 

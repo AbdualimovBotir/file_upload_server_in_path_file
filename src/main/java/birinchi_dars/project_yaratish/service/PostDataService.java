@@ -3,11 +3,12 @@ package birinchi_dars.project_yaratish.service;
 import birinchi_dars.project_yaratish.Repository.PostrDataRepo;
 import birinchi_dars.project_yaratish.entity.PostData;
 import birinchi_dars.project_yaratish.model.Posts;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PostDataService {
@@ -49,5 +50,11 @@ public class PostDataService {
 //                }).collect(Collectors.toList());
 //        return postrDataRepo.saveAll(postDataList);
 //    }
+
     }
+
+     @Transactional(readOnly = true)
+      public Page<PostData> findAll(org.springframework.data.domain.Pageable pageable) {
+         return postrDataRepo.findAll(pageable);
+      }
 }

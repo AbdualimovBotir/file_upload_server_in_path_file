@@ -1,8 +1,8 @@
 package birinchi_dars.project_yaratish.entity;
 
 import birinchi_dars.project_yaratish.entity.enumeration.FileStorageStatus;
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 @Entity
 public class FileStorege implements Serializable {

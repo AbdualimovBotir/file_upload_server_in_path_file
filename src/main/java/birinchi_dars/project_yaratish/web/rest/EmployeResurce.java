@@ -38,8 +38,9 @@ public class EmployeResurce {
         return ResponseEntity.ok(result);
     }
     @GetMapping("/employees")
-    public ResponseEntity getAll(@RequestParam String name){
-        List<Employe> employe=employeService.findAll(name);
+    public ResponseEntity getAll(@RequestParam(required = false) String name,
+                                 @RequestParam(required = false) String lastName){
+        List<Employe> employe=employeService.findAll(name,lastName);
         return ResponseEntity.ok(employe);
     }
 }

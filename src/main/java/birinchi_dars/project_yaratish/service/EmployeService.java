@@ -24,8 +24,8 @@ public class EmployeService {
         Employe employe=employeRepository.findById(id).get();
         return employe;
     }
-    public List<Employe> findAll(String name){
-        List<Employe> employe=employeRepository.findAll(name);
+    public List<Employe> findAll(String name,String last_name){
+        List<Employe> employe=employeRepository.findAll(name,last_name);
         return employe;
     }
 

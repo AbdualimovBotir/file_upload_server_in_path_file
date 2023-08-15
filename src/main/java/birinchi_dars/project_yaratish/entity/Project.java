@@ -1,8 +1,6 @@
 package birinchi_dars.project_yaratish.entity;
 
-import jakarta.persistence.*;
-import org.hibernate.sql.Insert;
-
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 
